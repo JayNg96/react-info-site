@@ -1,17 +1,18 @@
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import { Header } from './Header.js';
+import { Footer } from './Footer.js';
+import { PageContent } from './PageContent.js';
 
-const navEl = (
-  <nav>
-      <h1>myWebsite</h1>
-      <ul>
-          <li>Pricing</li>
-          <li>About</li>
-          <li>Contact</li>
-      </ul>
-  </nav>
-)
+function Page() {
+    return (
+        <div>
+            <Header/>
+            <PageContent/>
+            <Footer/>
+        </div>
+    )
+}
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(navEl)
-
+const root = ReactDOM.createRoot(document.getElementById("root"))
+root.render(<Page/>)
